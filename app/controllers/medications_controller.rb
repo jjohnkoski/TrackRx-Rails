@@ -1,5 +1,5 @@
 class MedicationsController < ApplicationController
     def index
-        @medications = ['Trazodone', 'Ibuprofen', 'Zyrtec']
+        @medications = Medicine.all
     end
 end
