@@ -2,7 +2,7 @@
 
 <ul>
     <% @medications.each do |med| %>
-    <li><%= med.name %> (RX:<%= med.rx_number %>):
+    <li><%= med.name %> (RX:<%= med.rx_number %>-<%= med.rx_number2 %>):
         <%= med.dose %>
     </li>
     <% end %>
