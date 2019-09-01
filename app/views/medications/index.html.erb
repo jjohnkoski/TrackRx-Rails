@@ -1,9 +1,9 @@
-<h1>Medications</h1>
+<h1><%= pluralize(@medications.size, 'Medicine') %></h1>
 
 <ul>
     <% @medications.each do |med| %>
-    <li><%= med.name %> (RX:<%= med.rx_number %>-<%= med.rx_number2 %>):
-        <%= med.dose %>
+    <li><%= med.name %>: RX Number <!--Needs link method-->
+        View Details  <!--Needs link method-->
     </li>
     <% end %>
 </ul>
