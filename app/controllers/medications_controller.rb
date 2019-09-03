@@ -4,6 +4,6 @@ class MedicationsController < ApplicationController
     end
 
     def show
-        @medication = Medicine.find_by(name: params[:name])
+        @medication = Medicine.find(params[:id])
     end
 end
