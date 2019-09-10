@@ -1,0 +1,18 @@
+<article>
+    <header>
+        <h2><%= @medicine.name %></h2>
+    </header>
+    <table>
+    <tr>
+        <th>Dose:</th>
+        <td><%= @medicine.dose %></td>
+    </tr>
+    <tr>
+        <th>RX Number:</th>
+        <td><%= @medicine.rx_number %>-<%= @medicine.rx_number2 %></td>
+    </tr>
+    </table>
+</article>
+
+<%= link_to("My Medicines", root_path) %> |
+<%= link_to("Edit", edit_medicine_path(@medicine)) %>

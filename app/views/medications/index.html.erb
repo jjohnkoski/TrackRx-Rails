@@ -1,8 +1,0 @@
-<h1><%= pluralize(@medications.size, 'Medicine') %></h1>
-
-<ul>
-    <% @medications.each do |medication| %>
-    <li><%= link_to(medication.name, medication_path(medication)) %>
-    </li>
-    <% end %>
-</ul>

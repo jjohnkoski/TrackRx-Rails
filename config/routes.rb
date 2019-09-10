@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
-    root "medications#index"
-    get "medications" => "medications#index"
-    get "medications/:id" => "medications#show", as: "medication"
+    root "medicines#index"
+    get "medicines" => "medicines#index"
+    get "medicines/:id" => "medicines#show", as: "medicine"
+    get "medicines/:id/edit" => "medicines#edit", as: "edit_medicine"
+    patch "medicines/:id" => "medicines#update"
 end
