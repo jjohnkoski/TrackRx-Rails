@@ -1,21 +1,3 @@
 <h1><%= @medicine.name %></h1>
 
-<%= form_for(@medicine) do |f| %>
-    <p>
-        <%= f.label :name %><br>
-        <%= f.text_field :name %>
-    </p>
-    <p>
-        <%= f.label :rx_number %><br>
-        <%= f.number_field :rx_number %><br>
-        <%= f.label :rx_number2 %><br>
-        <%= f.number_field :rx_number2 %>
-    </p>
-    <p>
-        <%= f.label :dose %><br>
-        <%= f.text_area :dose, cols: 25, rows: 7 %>
-    </p>
-    <p>
-        <%= f.submit %>
-    </p>
-<% end %>
+<%= render 'form' %>
