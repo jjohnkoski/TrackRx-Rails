@@ -15,4 +15,6 @@
 </article>
 
 <%= link_to("My Medicines", root_path) %> |
-<%= link_to("Edit", edit_medicine_path(@medicine)) %>
+<%= link_to("Edit", edit_medicine_path(@medicine)) %> |
+<%= link_to "Delete", medicine_path(@medicine), method: :delete,
+data: {confirm: "Delete medicine?"} %>

@@ -27,6 +27,12 @@ class MedicinesController < ApplicationController
         redirect_to @medicine
     end
 
+    def destroy
+        @medicine = Medicine.find(params[:id])
+        @medicine.destroy
+        redirect_to medicines_url
+    end
+
 private
 
     def medicine_params
