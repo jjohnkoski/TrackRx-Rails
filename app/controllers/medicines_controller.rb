@@ -1,6 +1,6 @@
 class MedicinesController < ApplicationController
     def index
-        @medicines = Medicine.all
+        @medicines = Medicine.all.order("name")
     end
 
     def show
