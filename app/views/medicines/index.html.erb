@@ -1,4 +1,4 @@
-<h1><%= pluralize(@medicines.size, 'Medicine') %></h1>
+<h1 style="font-size: medium;">My Medicines</h1>
 
 <ul>
     <% @medicines.each do |medicine| %>
@@ -6,4 +6,3 @@
     </li>
     <% end %>
 </ul>
-<%= link_to("<button>Add Medicine</button>".html_safe, new_medicine_path) %>
