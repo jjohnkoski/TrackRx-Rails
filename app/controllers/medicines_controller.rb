@@ -13,8 +13,11 @@ class MedicinesController < ApplicationController
 
     def update
         @medicine = Medicine.find(params[:id])
-        @medicine.update(medicine_params)
-        redirect_to @medicine
+        if @medicine.update(medicine_params)
+            redirect_to @medicine, notice: 'Medicine updated.'
+        else
+            render :edit
+        end
     end
 
     def new
@@ -23,14 +26,17 @@ class MedicinesController < ApplicationController
 
     def create
         @medicine = Medicine.new(medicine_params)
-        @medicine.save
-        redirect_to @medicine
+        if @medicine.save
+            redirect_to @medicine, notice: 'Medicine added.'
+        else
+            render :new
+        end
     end
 
     def destroy
         @medicine = Medicine.find(params[:id])
         @medicine.destroy
-        redirect_to medicines_url
+        redirect_to medicines_url, notice: 'Medicine deleted.'
     end
 
 private
