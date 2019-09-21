@@ -1,0 +1,13 @@
+<header>
+    <h1>
+        Medicines for <%= link_to(@user.name, @user) %>
+    </h1>
+    <ul>
+        <% @user.medicines.each do |medicine| %>
+        <li>
+            <%= medicine.name %>: <%= medicine.dose %><br>
+            Rx: <%= medicine.rx_number %> - <%= medicine.rx_number2 %>
+        </li>
+        <% end %>
+    </ul>
+</header>
