@@ -21,15 +21,4 @@ ActiveRecord::Schema.define(version: 2019_09_21_024817) do
     t.integer "rx_number2"
   end
 
-  create_table "users", force: :cascade do |t|
-    t.string "name"
-    t.string "email"
-    t.string "password"
-    t.string "pharmacy"
-    t.integer "medicine_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["medicine_id"], name: "index_users_on_medicine_id"
-  end
-
 end
