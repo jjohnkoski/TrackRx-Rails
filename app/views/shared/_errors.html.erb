@@ -1,10 +1,10 @@
 <% if object.errors.any? %>
   <header>
-    <h2>
-      Oops! Your information could not be saved.
+    <h2 id="meds-header">
+      Your information could not be saved.
     </h2>
-    <h3>
-      Please correct the following <%= pluralize(object.errors, "error") %>:
+    <h3 id="regular">
+      Please correct the following errors:
     </h3>
   </header>
   <ul>
