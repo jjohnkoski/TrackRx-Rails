@@ -14,6 +14,8 @@ header#header {
 
 h1#title {
     font-family: "Lucida Console", Monaco, monospace;
+    text-align: center;
+    font-size: 40px;
 }
 
 footer#footer {
@@ -39,4 +41,49 @@ aside#sidebar {
     border-right: 6px solid darken($primary-color, 15%);
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
+}
+
+h2#meds-header {
+    text-align: left;
+    padding-left: 10px;
+    font-family: Tahoma, Geneva, sans-serif;
+    color: $background-color;
+}
+
+fieldset#form {
+
+  margin: 0 0 10px 0;
+  padding: 10px 20px;
+  background-color: $tertiary-color;
+  border-bottom: 6px solid darken($primary-color, 15%);
+  border-left: 6px solid darken($primary-color, 15%);
+  border-right: 6px solid darken($primary-color, 15%);
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  box-shadow: #aaa 0 0 8px;
+
+  label {
+    font-size: 1em;
+    display: block;
+    margin-bottom: .25em;
+    font-family: Tahoma, Geneva, sans-serif;
+    color: $background-color;
+  }
+
+
+  ol {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+        li {
+            margin: 0 0 20px 0;
+            padding: 0;
+
+            &.required label {
+                font-weight: bold;
+            }
+        }
+
+    }
 }

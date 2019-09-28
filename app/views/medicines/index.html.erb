@@ -1,7 +1,9 @@
-<h2 id="meds-header">My Medicines</h2>
-<ul>
-    <% @medicines.each do |medicine| %>
-    <li id="list-item"><%= link_to(medicine.name, medicine_path(medicine)) %>
-    </li>
-    <% end %>
-</ul>
+<h2 id="meds-header">Welcome!
+
+<nav>
+    <p>
+        <%= link_to 'Signup', signup_path %> | Sign In
+    </p>
+</nav>
+
+</h2>

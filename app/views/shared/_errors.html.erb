@@ -1,14 +1,14 @@
-<% if @medicine.errors.any? %>
+<% if object.errors.any? %>
   <header>
     <h2>
-      Oops! The <%= @medicine.class.name.humanize.downcase %> could not be saved.
+      Oops! Your information could not be saved.
     </h2>
     <h3>
-      Please correct the following <%= pluralize(@medicine.errors.count, "error") %>:
+      Please correct the following <%= pluralize(object.errors, "error") %>:
     </h3>
   </header>
   <ul>
-    <% @medicine.errors.full_messages.each do |message| %>
+    <% object.errors.full_messages.each do |message| %>
       <li><%= message %></li>
     <% end %>
   </ul>
