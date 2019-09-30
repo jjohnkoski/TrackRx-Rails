@@ -1,0 +1,20 @@
+<h2 id="meds-header">Sign In</h2>
+
+
+<%= form_tag(session_path) do %>
+  <fieldset id="form">
+    <ol>
+      <li>
+        <%= label_tag :email %>
+        <%= email_field_tag :email, nil %>
+      </li>
+      <li>
+        <%= label_tag :password %>
+        <%= password_field_tag :password, nil %>
+      </li>
+      <p>
+          <%= submit_tag 'Sign In' %>
+      </p>
+    </ol>
+  </fieldset>
+<% end %>
