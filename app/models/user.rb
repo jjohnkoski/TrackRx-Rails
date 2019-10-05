@@ -1,5 +1,6 @@
 class User < ApplicationRecord
   has_secure_password
+  has_many :medicines, dependent: :destroy
 
   validates :name, presence: true
   validates :email, presence: true,
@@ -8,7 +9,7 @@ class User < ApplicationRecord
 
     def self.authenticate(email, password)
         user = User.find_by(email: email)
-        user && user.authenticate(password)    
-    end    
+        user && user.authenticate(password)
+    end
 
 end
