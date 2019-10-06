@@ -1,7 +1,8 @@
 class MedicinesController < ApplicationController
 
-before_action :require_signin, except: [:index, :show]
-before_action :require_admin, except: [:index, :show]
+before_action :require_signin
+# Not sure yet how this will play out with user specific medicines.
+#before_action :require_admin, only: :destroy
     def index
         @medicines = Medicine.all.order("name")
     end
@@ -16,6 +17,7 @@ before_action :require_admin, except: [:index, :show]
 
     def update
         @medicine = Medicine.find(params[:id])
+        @medicine.user = current_user
         if @medicine.update(medicine_params)
             redirect_to @medicine, notice: 'Medicine updated.'
         else
@@ -43,7 +45,7 @@ before_action :require_admin, except: [:index, :show]
     end
 
 private
-
+#Check this permit if it seems insecure
     def medicine_params
         params.require(:medicine).permit!
     end
