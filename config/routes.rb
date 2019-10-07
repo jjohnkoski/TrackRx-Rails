@@ -1,7 +1,10 @@
 Rails.application.routes.draw do
+
+# Need to make a welcome splash screen for root
+  resources :takes
+  resources :users
+  resource :session
+  resources :medicines
     get 'signup' => 'users#new'
-    resources :users
-    resource :session
     root "medicines#index"
-    resources :medicines
 end

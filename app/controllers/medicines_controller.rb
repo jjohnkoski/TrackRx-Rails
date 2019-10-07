@@ -2,7 +2,7 @@ class MedicinesController < ApplicationController
 
 before_action :require_signin
 # Not sure yet how this will play out with user specific medicines.
-#before_action :require_admin, only: :destroy
+before_action :require_admin, only: :destroy
     def index
         @medicines = Medicine.all.order("name")
     end
