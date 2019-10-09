@@ -14,6 +14,12 @@
     </table>
 </article>
 
-<%= link_to("Edit", edit_medicine_path(@medicine)) %> |
-<%= link_to "Delete", medicine_path(@medicine), method: :delete,
-data: {confirm: "Delete medicine?"} %>
+<% if current_user %>
+    <% if @taken_medicine %>
+        <%= link_to 'Remove Medicine', medicine_take_path(@medicine, @taken_medicine),
+        method: :delete %>
+    <% else %>
+        <%= link_to 'Add Medicine', medicine_takes_path(@medicine), method:
+        :post %>
+    <% end %>
+<% end %>

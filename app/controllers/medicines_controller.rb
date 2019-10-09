@@ -9,6 +9,9 @@ before_action :require_admin, only: :destroy
 
     def show
         @medicine = Medicine.find(params[:id])
+        if current_user
+            @taken_medicine =  current_user.takes.find_by(medicine_id: @medicine.id)
+        end
     end
 
     def edit
