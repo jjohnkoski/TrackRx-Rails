@@ -11,6 +11,14 @@
         <th>RX Number:</th>
         <td><%= @medicine.rx_number %>-<%= @medicine.rx_number2 %></td>
     </tr>
+    <tr>
+        <th>Drug Type:</th>
+            <% @types.each do |type| %>
+                <td>
+                    <%= type.name %>
+                </td>
+            <% end %>
+    </tr>
     </table>
 </article>
 

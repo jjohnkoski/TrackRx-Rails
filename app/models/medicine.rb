@@ -5,4 +5,6 @@ class Medicine < ApplicationRecord
 
     has_many :takes, dependent: :destroy
     has_many :takers, through: :takes, source: :user
+    has_many :classifications, dependent: :destroy
+    has_many :types, through: :classifications
 end

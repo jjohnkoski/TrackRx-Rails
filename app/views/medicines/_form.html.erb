@@ -15,6 +15,9 @@
         <%= f.text_area :dose, cols: 25, rows: 7 %>
     </p>
     <p>
+        <%= f.collection_check_boxes(:type_ids, Type.all, :id, :name) %>
+    </p>
+    <p>
         <%= f.submit "Update Medicine" %> <%= link_to("Cancel", medicines_path) %>
     </p>
 <% end %>
