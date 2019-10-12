@@ -1,3 +1,5 @@
+<% content_for(:title, @user.name) %>
+
 <h1>User splash page</h1>
 
 
@@ -13,6 +15,7 @@ My Medicines
 </ul>
 <% end %>
 
+<% content_for :side do %>
  <nav>
     <% if current_user == @user %>
      <%= link_to 'Edit Account', edit_user_path(@user) %>
@@ -21,3 +24,4 @@ My Medicines
             data: { confirm: 'Are you sure you want to permanently delete your account?' } %>
     <% end %>
  </nav>
+<% end %>

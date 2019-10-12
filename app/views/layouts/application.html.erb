@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>TrackRx</title>
+    <title><%= page_title %></title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -17,7 +17,7 @@
     </p>
   <% end %>
 
-
+  <%= render 'layouts/sidebar' %>
 
   <body>
     <%= yield %>

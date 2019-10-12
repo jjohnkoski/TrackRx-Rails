@@ -1,6 +1,6 @@
 <aside id="sidebar">
   <nav>
-    <%= link_to '<button>All Medicines</button>'.html_safe, medicines_path %><br>
-    <%= link_to '<button>Add Medicine</button>'.html_safe, new_medicine_path %>
+    <%= link_to 'Home', medicines_path %><br>
+    <%= content_for(:side) %>
   </nav>
 </aside>
